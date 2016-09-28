@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ESFWelcomeAnimationView1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" id="yr8-4P-wji">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="310"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="huanying1_05.png" id="eqR-qb-2Na">
+                            <rect key="frame" x="136" y="36" width="49" height="123"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="huanying1_01.png" id="Nqb-ZT-Y6l">
+                            <rect key="frame" x="65" y="240" width="188" height="70"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinY="YES" heightSizable="YES"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="huanying1_04.png" id="OPp-fW-JPy">
+                            <rect key="frame" x="37" y="178" width="75" height="75"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="huanying1_03.png" id="dD3-qI-Y1U">
+                            <rect key="frame" x="122" y="178" width="75" height="75"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="huanying1_02.png" id="EaK-UI-btv">
+                            <rect key="frame" x="207" y="178" width="75" height="75"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.98431372549999996" green="0.93725490199999995" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="huanying1_06.png" id="NYT-PS-itc">
+                    <rect key="frame" x="0.0" y="325" width="320" height="123"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="contactIView" destination="EaK-UI-btv" id="MqW-PJ-jwM"/>
+                <outlet property="personIView" destination="eqR-qb-2Na" id="FvS-gv-ADs"/>
+                <outlet property="photoIView" destination="dD3-qI-Y1U" id="Jpm-rf-nXp"/>
+                <outlet property="sendMessageIView" destination="OPp-fW-JPy" id="tCp-ld-KSw"/>
+            </connections>
+            <point key="canvasLocation" x="-118" y="331"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="huanying1_01.png" width="188" height="71"/>
+        <image name="huanying1_02.png" width="75" height="75"/>
+        <image name="huanying1_03.png" width="75" height="75"/>
+        <image name="huanying1_04.png" width="75" height="75"/>
+        <image name="huanying1_05.png" width="48" height="122"/>
+        <image name="huanying1_06.png" width="320" height="123"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

@@ -1,0 +1,33 @@
+<module name="APContactRecordList" initializer="createTable" tableName="contact_list" version="1.0">
+    
+    <const table_columns="(userID, fullName, realName, localName, contactType, account, headUrl, phoneString, acctStatus, certifiedLevel,gender, birthday, constellation, lastMsgID)"/>
+    <const table_values="#{m.userID}, #{m.fullName}, #{m.realName}, #{m.localName}, #{m.contactType},  #{m.account}, #{m.headUrl},#{m.phoneString}, #{m.acctStatus}, #{m.certifiedLevel},#{m.gender}, #{m.birthday}, #{m.constellation}, #{m.lastMsgID}"/>
+    <update id="createTable">
+        <step>
+            create table if not exists ${T} (userID text primary key, fullName text,realName text, localName text, contactType integer, account text, headUrl text, phoneString text, acctStatus text, certifiedLevel integer ,gender text, birthday text, constellation text, lastMsgID long)
+        </step>
+        <step>
+            create index if not exists userID_idx on ${T} (userID)
+        </step>
+    </update>
+    <crypt class="APContactInfo" property="fullName"/>
+    <crypt class="APContactInfo" property="realName"/>
+    <crypt class="APContactInfo" property="account"/>
+    <crypt class="APContactInfo" property="phone"/>
+    
+    
+    <insert id="insertContact" arguments="m">
+        insert or replace into ${T} ${table_columns} values(${table_values})
+    </insert>
+    
+    <insert id="insertContactList" arguments="contacts" foreach="contacts.m">
+        insert or replace into ${T} ${table_columns} values(${table_values})
+    </insert>
+
+
+    
+    <select id="queryContactInfoWithUserID" arguments="userID" result="APContactInfo">
+        select * from ${T} where userID = #{userID}
+    </select>
+    
+</module>

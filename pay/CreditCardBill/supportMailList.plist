@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>qq.com</string>
+	<string>vip.qq.com</string>
+	<string>foxmail.com</string>
+	<string>163.com</string>
+	<string>126.com</string>
+	<string>yeah.net</string>
+	<string>gmail.com</string>
+	<string>hotmail.com</string>
+	<string>sina.com</string>
+	<string>sina.cn</string>
+	<string>vip.sina.com</string>
+	<string>sohu.com</string>
+	<string>vip.sohu.com</string>
+	<string>139.com</string>
+	<string>189.cn</string>
+	<string>live.cn</string>
+	<string>live.com</string>
+	<string>outlook.com</string>
+	<string>msn.com</string>
+	<string>yahoo.com</string>
+	<string>tom.com</string>
+	<string>21cn.com</string>
+	<string>alipay.com</string>
+	<string>wo.com.cn</string>
+	<string>aliyun.com</string>
+	<string>vip.163.com</string>
+	<string>icloud.com</string>
+</array>
+</plist>

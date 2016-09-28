@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>externalDomain</key>
+	<array>
+		<string>mcashier.stable.alipay.net</string>
+		<string>mcashier.test.alipay.net</string>
+		<string>wappaygw.alipay.com</string>
+	</array>
+	<key>taobaoDomain</key>
+	<array>
+		<string>maliprod.stable.alipay.net</string>
+		<string>maliprod.test.alipay.net</string>
+		<string>maliprod.alipay.com</string>
+		<string>mali.alipay.com</string>
+	</array>
+</dict>
+</plist>

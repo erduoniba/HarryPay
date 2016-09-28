@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5E5C7443-9A7F-43A5-A9D1-3C79810DE345</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HarryPay</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>192DA23B8859CA33E0C123E4CC45375671B031BF</key>
+		<string>https://bitbucket.org/denglibing/harrypay.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>HarryPay.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>192DA23B8859CA33E0C123E4CC45375671B031BF</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/denglibing/harrypay.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>192DA23B8859CA33E0C123E4CC45375671B031BF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>192DA23B8859CA33E0C123E4CC45375671B031BF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HarryPay</string>
+		</dict>
+	</array>
+</dict>
+</plist>

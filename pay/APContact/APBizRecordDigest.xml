@@ -1,0 +1,74 @@
+<module name="APBizRecordDigest" initializer="createTable" tableName="chat_digest" version="1.0">
+    
+    <const table_columns="(clientMsgID, msgID, userID, userType, side, templateCode, templateData, bizMemo, bizType, appId, link, createTime, messageState, extendData, isDeleted, bizDeleted, contextData, egg)"/>
+    <const table_values="#{m.clientMsgID}, #{m.msgID}, #{m.userID}, #{m.userType}, #{m.side}, #{m.templateCode}, #{m.templateData}, #{m.bizMemo}, #{m.bizType}, #{m.appId}, #{m.link}, #{m.createTime}, #{m.messageState}, #{m.extendData}, #{m.isDeleted}, #{m.bizDeleted},#{m.contextData},#{m.egg}"/>
+    
+    <update id="createTable">
+        <step>
+            create table if not exists ${T} (clientMsgID char(64), msgID long, userID char(20), userType text, side integer, templateCode text, templateData text, bizMemo text, bizType text, appId text, link text, createTime double, messageState integer, extendData text, isDeleted boolean, bizDeleted boolean, contextData text, egg text,primary key(userID, bizType))
+        </step>
+        <step>
+            create index if not exists msgID_idx on ${T} (msgID)
+        </step>
+        <step>
+            create index if not exists userID_idx on ${T} (userID)
+        </step>
+        <step>
+            create index if not exists bizType_idx on ${T} (bizType)
+        </step>
+        <step>
+            create index if not exists createTime_idx on ${T} (createTime)
+        </step>
+    </update>
+    
+    <crypt class="APBizRecord" property="userName"/>
+    <crypt class="APBizRecord" property="userAccount"/>
+    
+    <insert id="insertContactMessages" arguments="messages" foreach="messages.m">
+        insert or replace into ${T} ${table_columns} values(${table_values})
+    </insert>
+    
+    <update id="deleteMessagesWithUser" arguments="userID">
+        update ${T} set isDeleted = 1 where userID = #{userID}
+    </update>
+    
+    <update id="deleteMessagesUnderBusinessWithUser" arguments="userID, bizType">
+        update ${T} set bizDeleted = 1 where userID = #{userID} and bizType = #{bizType}
+    </update>
+    
+    <update id="updateContactMessage": arguments="m">
+        replace into ${T} ${table_columns} values(${table_values})
+    </update>
+    
+    <select id="queryMessageWithClientMsgID" arguments="clientMsgID" result="APBizRecord">
+        select * from ${T} where clientMsgID = #{clientMsgID}
+    </select>
+    
+    <select id="messageExistsWithClientMsgID" arguments="clientMsgID" result="string">
+        select msgID from ${T} where clientMsgID = #{clientMsgID}
+    </select>
+    
+    <update id="markMessagesRead" arguments="userID">
+        update ${T} set messageState = 1 where userID = #{userID}
+    </update>
+    
+    <select id="queryLatestMessageForEachUser" arguments="bizType" result="[APBizRecord]">
+        select * from (
+            select * from ${T}
+            <if true="bizType == nil">where isDeleted = 0 and bizType != "CARD" </if>
+            <if true="bizType != nil">where bizType = #{bizType} and bizDeleted = 0 </if>
+            order by createTime asc
+            )
+            group by userID order by createTime desc
+    </select>
+    
+    <select id="queryLatestMessageForTransfer" result="[APBizRecord]">
+        select * from (
+            select * from ${T} where (bizType = "TRANSFER" or bizType = "CARD" or bizType = 'COLLET' or bizType = 'AA') and bizDeleted = 0
+            order by createTime asc
+            )
+            group by userID order by createTime desc
+    </select>
+    
+
+</module>

@@ -1,0 +1,81 @@
+
+/* Class = "IBUILabel"; text = "Detail"; ObjectID = "06y-HQ-bXZ"; */
+"06y-HQ-bXZ.text" = "Detail";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "2AP-7E-rAm"; */
+"2AP-7E-rAm.text" = "Title";
+
+/* Class = "IBUILabel"; text = "Loaded by FirstViewController"; ObjectID = "A5M-7J-77L"; */
+"A5M-7J-77L.text" = "Loaded by FirstViewController";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "Als-xT-5cT"; */
+"Als-xT-5cT.text" = "Title";
+
+/* Class = "IBUITextField"; placeholder = "手机号/邮箱/会员名"; ObjectID = "C22-l9-WQu"; */
+"C22-l9-WQu.placeholder" = "手机号/邮箱/会员号";
+
+/* Class = "IBUITabBarItem"; title = "探索"; ObjectID = "ENR-GS-2uf"; */
+"ENR-GS-2uf.title" = "探索";
+
+/* Class = "IBUITabBarItem"; title = "财富"; ObjectID = "IcW-bK-0hE"; */
+"IcW-bK-0hE.title" = "财富";
+
+/* Class = "IBUIButton"; normalTitle = "忘记密码？"; ObjectID = "Jxi-tu-VDZ"; */
+"Jxi-tu-VDZ.normalTitle" = "忘记密码？";
+
+/* Class = "IBUILabel"; text = "First View"; ObjectID = "KQZ-1w-vlD"; */
+"KQZ-1w-vlD.text" = "First View";
+
+/* Class = "IBUIButton"; normalTitle = "注 册"; ObjectID = "LKP-72-4cK"; */
+"LKP-72-4cK.normalTitle" = "注 册";
+
+/* Class = "IBUILabel"; text = "Loaded by SecondViewController"; ObjectID = "NDk-cv-Gan"; */
+"NDk-cv-Gan.text" = "Loaded by SecondViewController";
+
+/* Class = "IBUINavigationItem"; title = "设置"; ObjectID = "TMJ-3r-DzN"; */
+"TMJ-3r-DzN.title" = "设置";
+
+/* Class = "IBUILabel"; text = "Subtitle"; ObjectID = "WSr-T6-057"; */
+"WSr-T6-057.text" = "Subtitle";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "bm5-SM-q6v"; */
+"bm5-SM-q6v.text" = "Title";
+
+/* Class = "IBUIButton"; normalTitle = "余额宝"; ObjectID = "c7h-75-rR8"; */
+"c7h-75-rR8.normalTitle" = "余额宝";
+
+/* Class = "IBUITabBarItem"; title = "支付宝"; ObjectID = "cgU-YS-zqy"; */
+"cgU-YS-zqy.title" = "支付宝";
+
+/* Class = "IBUILabel"; text = "手机宝令"; ObjectID = "eEk-st-Fri"; */
+"eEk-st-Fri.text" = "手机宝令";
+
+/* Class = "IBUITabBarItem"; title = "服务窗"; ObjectID = "hwl-2Z-qTs"; */
+"hwl-2Z-qTs.title" = "服务窗";
+
+/* Class = "IBUINavigationItem"; title = "财富"; ObjectID = "j14-Wk-e03"; */
+"j14-Wk-e03.title" = "财富";
+
+/* Class = "IBUIBarButtonItem"; title = "设置    "; ObjectID = "jgR-mc-5I2"; */
+"jgR-mc-5I2.title" = "设置    ";
+
+/* Class = "IBUIButton"; normalTitle = "淘宝账户登录"; ObjectID = "our-Zh-AoO"; */
+"our-Zh-AoO.normalTitle" = "淘宝账户登录";
+
+/* Class = "IBUINavigationItem"; title = "支付宝"; ObjectID = "owS-Zb-CwF"; */
+"owS-Zb-CwF.title" = "支付宝";
+
+/* Class = "IBUINavigationItem"; title = "探索"; ObjectID = "p24-3S-DGk"; */
+"p24-3S-DGk.title" = "探索";
+
+/* Class = "IBUINavigationItem"; title = "服务窗"; ObjectID = "qA2-l4-J0m"; */
+"qA2-l4-J0m.title" = "服务窗";
+
+/* Class = "IBUITextField"; placeholder = "支付宝登录密码"; ObjectID = "raQ-Xf-hUn"; */
+"raQ-Xf-hUn.placeholder" = "支付宝登录密码";
+
+/* Class = "IBUIButton"; normalTitle = "登录"; ObjectID = "xn0-hJ-5CN"; */
+"xn0-hJ-5CN.normalTitle" = "登录";
+
+/* Class = "IBUILabel"; text = "Second View"; ObjectID = "zEq-FU-wV5"; */
+"zEq-FU-wV5.text" = "Second View";

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>dynamicConfigUid</key>
+	<string>M2YyZGUyNzRjNTQ3YzJjYTEyOWQ0NzI1NjQwMmFkNTY=</string>
+	<key>mapiPayUrls</key>
+	<array/>
+	<key>taobaoBatchPayUrls</key>
+	<array>
+		<string>aHR0cDovL21hbGlwcm9kLmFsaXBheS5jb20vYmF0Y2hfcGF5bWVudC5kbw==</string>
+		<string>aHR0cDovL21hbGkuYWxpcGF5LmNvbS9iYXRjaF9wYXltZW50LmRv</string>
+	</array>
+	<key>taobaoPayUrls</key>
+	<array>
+		<string>aHR0cDovL21hbGlwcm9kLmFsaXBheS5jb20vdy90cmFkZV9wYXkuZG8=</string>
+		<string>aHR0cDovL21hbGkuYWxpcGF5LmNvbS93L3RyYWRlX3BheS5kbw==</string>
+	</array>
+	<key>thirdPayUrls</key>
+	<array>
+		<string>aHR0cDovL3dhcHBheWd3LmFsaXBheS5jb20vc2VydmljZS9yZXN0Lmh0bQ==</string>
+		<string>aHR0cDovLzExMC43NS4xNDMuNjUvc2VydmljZS9yZXN0Lmh0bQ==</string>
+		<string>aHR0cDovLzExMC43NS4xNDcuNjUvc2VydmljZS9yZXN0Lmh0bQ==</string>
+	</array>
+</dict>
+</plist>

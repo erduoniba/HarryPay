@@ -1,0 +1,71 @@
+<module name="APBizRecordPersonal" initializer="createTable" tableName="chat" version="1.0">
+    
+    <const table_columns="(localID, clientMsgID, msgID, userID, userType, side, templateCode, templateData, bizMemo, bizType,appId, link, createTime, messageState, extendData, mediaState,contextData, egg)"/>
+    <const table_values="#{m.createTime}, #{m.clientMsgID}, #{m.msgID}, #{m.userID}, #{m.userType},  #{m.side}, #{m.templateCode}, #{m.templateData}, #{m.bizMemo}, #{m.bizType}, #{m.appId},  #{m.link}, #{m.createTime} , #{m.messageState}, #{m.extendData}, #{m.mediaState}, #{m.contextData}, #{m.egg}"/>
+    <update id="createTable">
+        <step>
+            create table if not exists ${T} (localID long, clientMsgID char(64) primary key, msgID long, userID char(20), userType text, side integer, templateCode text, templateData text, bizMemo text, bizType text, appId text, link text, createTime long, messageState integer, extendData text, mediaState text, contextData text, egg text)
+        </step>
+        <step>
+            create index if not exists messageState_idx on ${T} (messageState)
+        </step>
+    </update>
+    
+    <crypt class="APBizRecord" property="userName"/>
+    <crypt class="APBizRecord" property="userAccount"/>
+    
+    <insert id="insertContactMessages" arguments="messages" foreach="messages.m">
+        insert or replace into ${T} ${table_columns} values(${table_values})
+    </insert>
+    
+    <select id="queryMessagesBefore" arguments="createTime, limit" result="[APBizRecord]">
+        select * from (
+        select * from ${T}
+        <if true="createTime &gt; 0">where createTime &lt; #{createTime}</if>
+         order by createTime desc
+        <if true="limit &gt; 0">limit #{limit}</if>
+        )order by createTime asc
+       
+    </select>
+    
+    
+    <select id="queryMessagesAfter" arguments="createTime" result="[APBizRecord]">
+        select * from ${T}
+        <if true="createTime &gt; 0">where createTime &gt; #{createTime}</if>
+        order by createTime asc
+    </select>
+    
+    <select id="queryLastMessage" result="APBizRecord">
+        select * from ${T} order by msgID desc limit 1
+    </select>
+    
+    
+    <select id="queryUnreadMessagesCountWithLastMsgId" arguments="lastMsgId" result="int">
+        select count(*) from ${T} where side = 0 and msgId &gt; #{lastMsgId}
+    </select>
+    
+    <select id="queryUnreadMessages" result="[APBizRecord]">
+        select * from ${T} where messageState = 0
+    </select>
+    
+    <update id="updateContactMessage": arguments="m">
+        update ${T} set messageState = #{m.messageState}, mediaState = #{m.mediaState} where clientMsgID = #{m.clientMsgID}
+    </update>
+    
+    <update id="updateMessagesState" arguments="messages" foreach="messages.m">
+        update ${T} set messageState = #{m.messageState}, mediaState = #{m.mediaState} where clientMsgID = #{m.clientMsgID}
+    </update>
+    
+    <update id="updateMessageMediaStateWithClientMsgID" arguments="clientMsgID , mediaState">
+        update ${T} set mediaState = #{mediaState} where clientMsgID = #{clientMsgID}
+    </update>
+
+    <update id="markAllMessagesRead">
+        update ${T} set messageState = 1 where messageState = 0
+    </update>
+    
+    <update id="markMessagesReadWithLastMsgID" arguments="lastMsgID">
+        update ${T} set messageState = 1 where messageState = 0 and msgID &lt;= #{lastMsgID}
+    </update>
+    
+</module>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>spaceName</key>
+	<dict>
+		<key>HP_AD_MANAGER_SERVICE_SPACE_NAME_HOME</key>
+		<array>
+			<string>APPTIPS_APPCENTER</string>
+			<string>BANNER_APPCENTER</string>
+			<string>APPICON_APPCENTER</string>
+			<string>DROPDOWN_APPCENTER</string>
+		</array>
+		<key>HP_AD_MANAGER_SERVICE_SPACE_NAME_H5_PRELOAD</key>
+		<array>
+			<string>APPTIPS_APPCENTER</string>
+			<string>BANNER_APPCENTER</string>
+			<string>APPICON_APPCENTER</string>
+			<string>DROPDOWN_APPCENTER</string>
+		</array>
+	</dict>
+	<key>preload</key>
+	<dict>
+		<key>BANNER_APPCENTER</key>
+		<string>{&quot;space_code&quot;:&quot;BANNER_APPCENTER&quot;,&quot;cache_time&quot;:&quot;40&quot;,&quot;type&quot;:&quot;&quot;,&quot;ads&quot;:[{&quot;id&quot;:&quot;238&quot;,&quot;content&quot;:&quot;https://i.alipayobjects.com/i/ecmng/png/201409/3RON85dTX3.png&quot;,&quot;href_url&quot;:&quot;alipays://platformapi/startapp?appId=20000132&quot;,&quot;behavior&quot;:&quot;&quot;,&quot;bundle_image&quot;:&quot;home_default_banner_ad_image_238.png&quot;,&quot;type&quot;:&quot;PIC&quot;},{&quot;id&quot;:&quot;235&quot;,&quot;content&quot;:&quot;https://i.alipayobjects.com/i/ecmng/png/201409/3PQfnit70H.png&quot;,&quot;href_url&quot;:&quot;alipays://platformapi/startapp?appId=20000150&quot;,&quot;behavior&quot;:&quot;&quot;,&quot;bundle_image&quot;:&quot;home_default_banner_ad_image_235.png&quot;,&quot;type&quot;:&quot;PIC&quot;},{&quot;id&quot;:&quot;239&quot;,&quot;content&quot;:&quot;https://i.alipayobjects.com/i/ecmng/png/201409/3MclYcN3HJ.png&quot;,&quot;href_url&quot;:&quot;alipays://platformapi/startapp?appId=09999988&quot;,&quot;behavior&quot;:&quot;&quot;,&quot;bundle_image&quot;:&quot;home_default_banner_ad_image_239.png&quot;,&quot;type&quot;:&quot;PIC&quot;}]}</string>
+		<key>DROPDOWN_APPCENTER</key>
+		<string>{&quot;space_code&quot;:&quot;DROPDOWN_APPCENTER&quot;,&quot;cache_time&quot;:&quot;1&quot;,&quot;type&quot;:&quot;DROPDOWN&quot;,&quot;ads&quot;:[{&quot;id&quot;:&quot;-100&quot;,&quot;content&quot;:&quot;我有我的方式&quot;,&quot;type&quot;:&quot;TEXT&quot;}]}</string>
+	</dict>
+</dict>
+</plist>
