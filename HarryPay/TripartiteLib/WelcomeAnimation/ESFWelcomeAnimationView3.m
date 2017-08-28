@@ -22,10 +22,10 @@ CGRect getBigCGrect(){
     [super defaultInterface];
     
     //(1)初始位置
-    _phoneIView.frame = CGRectMake(_phoneIView.frame.origin.x, 320, _phoneIView.frame.size.width, _phoneIView.frame.size.height);
+    _phoneIView.frame = CGRectMake(_phoneIView.frame.origin.x, Main_Size.width, _phoneIView.frame.size.width, _phoneIView.frame.size.height);
     _buyIView.frame = getSmallCGrect();
     _buyIView.alpha = 0;
-    _handIView.frame = CGRectMake(320, 320, _handIView.frame.size.width, _handIView.frame.size.height);
+    _handIView.frame = CGRectMake(Main_Size.width, Main_Size.width, _handIView.frame.size.width, _handIView.frame.size.height);
 }
 
 - (void)startAnimtion{
@@ -36,7 +36,7 @@ CGRect getBigCGrect(){
     
     //(2)手机上升
     [UIView animateWithDuration:0.8 animations:^{
-       _phoneIView.frame = CGRectMake(_phoneIView.frame.origin.x, 320 - _phoneIView.frame.size.height, _phoneIView.frame.size.width, _phoneIView.frame.size.height);
+       _phoneIView.frame = CGRectMake(_phoneIView.frame.origin.x, Main_Size.width - _phoneIView.frame.size.height, _phoneIView.frame.size.width, _phoneIView.frame.size.height);
     } completion:^(BOOL finished) {
         if (finished) {
             //(3)手指出现

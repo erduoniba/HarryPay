@@ -21,7 +21,7 @@
     [super defaultInterface];
     
     //(1)动画初始状态
-    _houseIView.frame = CGRectMake(_houseIView.frame.origin.x, 320, _houseIView.frame.size.width, _houseIView.frame.size.height);
+    _houseIView.frame = CGRectMake(_houseIView.frame.origin.x, Main_Size.width, _houseIView.frame.size.width, _houseIView.frame.size.height);
     _saleIView.alpha = 0;
     _saleIView.frame = CGRectMake(155, 150, 10, 10);
     _saleIView.image = [UIImage imageNamed:@"huanying2_021"];
@@ -46,7 +46,7 @@
     
     //(2)房子拔地而起
     [UIView animateWithDuration:0.5 animations:^{
-        _houseIView.frame = CGRectMake(_houseIView.frame.origin.x, 320 - _houseIView.frame.size.height, _houseIView.frame.size.width, _houseIView.frame.size.height);
+        _houseIView.frame = CGRectMake(_houseIView.frame.origin.x, Main_Size.width - _houseIView.frame.size.height, _houseIView.frame.size.width, _houseIView.frame.size.height);
     } completion:^(BOOL finished) {
         if (finished) {
             [self iconAnimation];

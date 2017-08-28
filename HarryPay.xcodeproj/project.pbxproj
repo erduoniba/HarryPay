@@ -878,7 +878,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/fangdd/Desktop/HarryPay/HarryPay/HarryPayPch.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)//HarryPay/HarryPayPch.pch";
 				INFOPLIST_FILE = HarryPay/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -894,7 +894,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/fangdd/Desktop/HarryPay/HarryPay/HarryPayPch.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)//HarryPay/HarryPayPch.pch";
 				INFOPLIST_FILE = HarryPay/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

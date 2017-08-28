@@ -38,14 +38,14 @@
         sView.delegate = self;
         sView.pagingEnabled = YES;
         sView.showsHorizontalScrollIndicator = NO;
-        sView.contentSize = CGSizeMake(320 * ESF_WELCOME_ANIMATION_COUNT, frame.size.height);
+        sView.contentSize = CGSizeMake(Main_Size.width * ESF_WELCOME_ANIMATION_COUNT, frame.size.height);
         lastContentX = 0;
         shouldAnimation = YES;
         
         _welcomeViews = [NSMutableArray array];
         for (int i=0; i<ESF_WELCOME_ANIMATION_COUNT; i++) {
             ESFWelcomeBaseAnimationView *view = [[[UINib nibWithNibName:[NSString stringWithFormat:@"ESFWelcomeAnimationView%d", i+1] bundle:nil] instantiateWithOwner:nil options:nil] objectAtIndex:0];
-            view.frame = CGRectMake(320 * i, 0, view.frame.size.width, view.frame.size.height);
+            view.frame = CGRectMake(Main_Size.width * i, 0, view.frame.size.width, view.frame.size.height);
             [view defaultInterface];
             [sView addSubview:view];
             view.handleToApp = ^{
@@ -64,7 +64,7 @@
         
         [self addSubview:sView];
         
-        _pageC = [[UIPageControl alloc] initWithFrame:CGRectMake(0, Main_Size.height - 40, 320, 30)];
+        _pageC = [[UIPageControl alloc] initWithFrame:CGRectMake(0, Main_Size.height - 40, Main_Size.width, 30)];
         _pageC.numberOfPages = ESF_WELCOME_ANIMATION_COUNT;
         _pageC.currentPage = 0;
         _pageC.currentPageIndicatorTintColor = [UIColor colorWithRed:156/255.0 green:156/255.0 blue:156/255.0 alpha:1];
@@ -78,7 +78,7 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     CGFloat currentContentX = scrollView.contentOffset.x;
     
-    if (abs(lastContentX - currentContentX) < 320) {
+    if (fabs(lastContentX - currentContentX) < Main_Size.width) {
         shouldAnimation = NO;
     }else{
         shouldAnimation = YES;
@@ -87,7 +87,7 @@
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     lastContentX = scrollView.contentOffset.x;
-    int pageNum = scrollView.contentOffset.x / 320;
+    int pageNum = scrollView.contentOffset.x / Main_Size.width;
     _pageC.currentPage = pageNum;
     
     if (shouldAnimation) {

@@ -9,7 +9,7 @@
 #import "SetViewController.h"
 
 #import "ServerHallViewController.h"
-
+#import "ESFWelcomeAnimationView.h"
 
 @interface SetViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -90,7 +90,8 @@ STRONG_PROPERTY NSArray *setImageArr;
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (indexPath.section == 0) {
-        
+        ESFWelcomeAnimationView *view = [[ESFWelcomeAnimationView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        [self.navigationController.view addSubview:view];
     }else{
         if (indexPath.row == 0) {
             ServerHallViewController *shVC = [ServerHallViewController quickInstance];
